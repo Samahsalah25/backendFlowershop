@@ -1,5 +1,5 @@
 const express = require("express");
-const connect = require("./config/db");
+const connect = require("./Config/db");
 const Products = require("./Models/Products");
 const Users = require("./Models/Users");
 const mongoose = require("mongoose");
