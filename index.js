@@ -39,7 +39,8 @@ app.use("/", authroutes);
 app.use(`/admin`, adminRoutes);
 app.use("/user", userRoutes);
 
-const dbURI = "mongodb://127.0.0.1/SCRIPPLE";
+const dbURI =
+  "mongodb://test:test@ac-gcwg0fr-shard-00-00.eyglc39.mongodb.net:27017,ac-gcwg0fr-shard-00-01.eyglc39.mongodb.net:27017,ac-gcwg0fr-shard-00-02.eyglc39.mongodb.net:27017/Fowershop?replicaSet=atlas-zyeogs-shard-0&ssl=true&authSource=admin";
 connect(dbURI);
 
 app.listen(5000, () => {
