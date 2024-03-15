@@ -32,9 +32,7 @@ app.post("/upload", (req, res) => {
 
   d;
 });
-// app.use('/api/auth', authroutes);
 
-// app.use('/user', userRoutes);
 app.use("/", authroutes);
 app.use(`/admin`, adminRoutes);
 app.use("/user", userRoutes);

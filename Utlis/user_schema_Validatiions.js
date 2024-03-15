@@ -2,12 +2,10 @@ const Joi = require("joi");
 
 // Define validation schema
 const Userschema = Joi.object({
-  userName: Joi.string()
-    .pattern(/^[a-zA-Z]{3,}$/)
-    .required(),
+  userName: Joi.string().required(),
   Age: Joi.number().integer().min(4).max(80),
   role: Joi.string().valid("admin", "user").default("user"),
-  Address: Joi.string().pattern(/^[a-zA-Z]{5,}$/),
+  Address: Joi.string(),
   isActive: Joi.boolean(),
   Email: Joi.string().email().required(),
   Password: Joi.string().min(8).required(),
@@ -20,10 +18,10 @@ const loginschema = Joi.object({
   Password: Joi.string().min(8).required(),
 });
 const UpdateValidation = Joi.object({
-  userName: Joi.string().pattern(/^[a-zA-Z]{3,}$/),
+  userName: Joi.string(),
   Age: Joi.number().integer().min(4).max(80),
   role: Joi.string().valid("admin", "user").default("user"),
-  Address: Joi.string().pattern(/^[a-zA-Z]{5,}$/),
+  Address: Joi.string(),
   isActive: Joi.boolean(),
   Email: Joi.string().email(),
   Password: Joi.string().min(8),
